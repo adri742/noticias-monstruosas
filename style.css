@@ -1,0 +1,264 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-image:url(fondoamarillo.avif) ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  
+}
+
+
+
+
+
+.cabeza {
+    background-color: #222;
+    color: #eee;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+  }
+    
+
+
+.cabeza a {
+    color: #ff66cc;
+    text-decoration: none;
+}
+
+
+
+
+
+/*Monstruo alcantrilla*/
+.alcantarilla {
+    background-image: url(backgroundalcantarilla.png);
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    display: flex;
+    gap: 10px;
+    color: white;
+}
+
+.alcantarilla img {
+    
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.alcantarilla p {
+    margin-right: 15px;
+}
+
+
+
+
+/*Profesor Tentaculo*/
+.profesor {
+    background-image: url(backgroundprofesor.jpg);
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.profesor img {
+    height: auto;
+   padding: 10px;  
+}
+
+.textoprofesor p{
+    margin-bottom: 50px;
+    color: white;
+    
+}
+
+.textoprofesor blockquote{
+    margin: 40px 0 0 0;
+    font-style: italic;
+    color: white;
+    transition: all 0.3s ease;
+    background-color: #023d15d0;
+    padding: 10px;
+    border-radius: 10px;
+    transition: all 0.3s ease; /*Activa la animación suave*/
+}
+
+/*Para darle la animación suave*/
+.textoprofesor blockquote:hover {
+    transform: scale(1.03); /*Agranda ligeramente*/
+    box-shadow: 0 40px 12px rgba(0, 0, 0, 0.4);
+}
+
+blockquote.izquierda {
+    text-align: left;
+    margin-left: 0;
+    
+}
+
+blockquote.derecha{
+    text-align: right;
+    margin-left: 300px;
+}
+
+
+
+
+
+
+/*Anuncio*/
+.divanuncio {
+    width: 100%; /*Ocupa todo el ancho*/
+    overflow: hidden; /*oculta lo que se sale del contenedor */
+    white-space: nowrap;/* evita que el texto se corte en varias líneas */
+}
+
+.fraseanuncio {
+    display: inline-block;
+    animation: deslizar 8s linear infinite; /* velocidad y repetición */
+}
+@keyframes deslizar {
+    0% {transform: translateX(100%);}
+    100% {transform: translateX(-100%);}
+}
+
+
+
+/*Esto de abajo es para darle una pequeña animación a las imagenes cuando entras a la web, a las imagenes en html les he dado la clase fade-in*/
+.fade-in {
+    opacity: 0;
+    animation: aparecer 2.2s ease forwards;
+}
+
+@keyframes aparecer {
+    0% {opacity: 0;
+    transform: translateY(20px);}
+
+    100% {opacity: 1;
+    transform: translateY(0);}
+}
+
+
+
+
+
+
+
+/*Personajes frikis*/
+
+/*Esto es importante, tengo la clase puesta en un ul dentro de un section. Lo que quiero es que el background img afecte a los li ademas que no quiero que afecte a los demas ul ni li de otros sections. Lo que habia probado era poner el background img en lo de arriba (.listapersonajes) pero eso lo necesito para poner el display flex y todo eso y si ponia el background img ahi lo que hacia era englobarla en la ul osea que no se cortaba como queria en cada li dejando un pequeño espacio, por lo tanto abajo ponemos otra vez la clase pero al lado le ponemos li especificando que queremos que afecte al li. Antes habia puesto .listapersonajes ul li pero no estaba bien porque me intentaba buscar un ul cuando la clase ya la tengo puesta en un ul asi que solo hay que poner li.*/
+.divpersonajes  {
+    background-image: url(madera.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 300px;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+
+}
+ .divpersonajes img {
+    border-radius: 10px;
+ }
+
+ .divpersonajes p{
+    background-color: rgba(116, 50, 12, 0.637);
+ }
+
+
+
+
+
+
+
+
+
+/*Inventos*/
+.invento {
+    height: 700px;
+    background-image: url(backgroundlab.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    position: relative;
+}
+
+.inventoimg1{
+  position: absolute;
+  top: 22%;
+ left: 8%;
+  width: 30%;
+}
+
+.inventoimg2{
+    position: absolute;
+  bottom: 5%;
+ right: 20%;
+  width: 30%;
+}
+
+.inventoimg1:hover,
+.inventoimg2:hover {
+  transform: rotate(-3deg) scale(1.2);
+  transition: transform 0.3s ease;
+}
+
+
+
+
+
+
+/*Monstruos de temporada*/
+.bloques {
+   display: flex;
+    gap: 10px;
+    justify-content: center;
+    padding: 40px;
+}
+
+.bloque {
+    background-image: url(background\ niebla.avif);
+    background-size: cover;
+    background-position: center;
+    width: 300px;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 70);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bloque img {
+    width: 300px;
+height: 530px;
+border-radius: 10px;
+}
+
+.bloque:hover {
+    transform: translateY(-20px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 50);
+}
+
+
+/*Footer*/
+.footer {
+    background-color: #222;
+    color: #eee;
+    text-align: center;
+    padding: 20px;
+    margin-top: 60px;
+  }
+  
+  .footer a {
+    color: #ff66cc;
+    text-decoration: none;
+  }
+  
+  
